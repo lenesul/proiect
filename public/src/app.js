@@ -16,12 +16,16 @@
     app.controller("tabController", function(){
         this.active = 1;
     });
+    
     app.controller("imageController", function(){
         var that=this;
+        this.brightness=0;
         
-        Caman("#canvas-id", "path/to/image.jpg", function () {
-            this.brightness(that.brightness);
-            this.render();
-        });
+    Caman("#image-id", function (that) {
+        this.brightness(that.brightness);
+        this.render();
+    });
+
+
     });
 })();
