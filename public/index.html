@@ -10,10 +10,34 @@
 		<script src="bower_components/semantic-ui/dist/semantic.min.css"></script>
 		<!-- src -->
 		<script src="src/app.js"></script>
+        <link rel="stylesheet" href="src/proiect.css" type="text/css"/>
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	</head>
     
     <body ng-app='instagram'>
-        <image-edit></image-edit>
+        <div class="ui pointing menu">
+            <a class="active item">Home</a>
+            <a class="item">Uploads</a>
+        </div>
+        <div class="ui segment">
+            <div class="images">
+                <h1>Uploader</h1>
+                <img src="img/img1.jpg" width="300" height="300"/>
+                <div class="likes ui grid">
+                    <div class="eight wide column">
+                        <div class="ui animated button" tabindex="0">
+                            <div class="visible content"><i class="thumbs outline up icon">Like</i></div>
+                            <div class="hidden content"><i class="heart icon"></i></div>
+                        </div>
+                    </div>
+                    <div class="eight wide column">10 Likes</div>
+                </div>
+                <div>Comments</div>
+            </div>
+        </div>
+                    <image-edit></image-edit>
+
     </body>
     <style>
         input[type="range"] {

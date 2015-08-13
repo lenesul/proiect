@@ -1,0 +1,24 @@
+h1 {
+	color : lightblue;	
+}
+
+body {
+	backgound-color:Azure;
+}
+
+.images {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width:600px;
+	border: solid 1px lightgray;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.images > h1 {
+	font-family: 'Lobster', cursive;
+	text-align: left;
+	margin-left:50px;
+	margin-top:10px;
+}
