@@ -1,5 +1,40 @@
-<canvas id='cvs-edit'></canvas>
-<div class="ui tabular menu">
-    <a class="active item">Presets</a>
-    <a class="item">Custom</a>
+<div ng-controller="imageController as imgC">
+    <canvas id='cvs-edit'></canvas>
+    <div ng-controller="tabController as tab">
+        <div class="ui top attached tabular menu">
+            <a class="item" ng-class="{active : tab.active === 1}" ng-click="tab.active=1">Presets</a>
+            <a class="item" ng-class="{active : tab.active === 2}" ng-click="tab.active=2">Custom</a>
+        </div>
+        <div class="ui bottom attached segment" ng-show="tab.active === 1">
+        <div class="ui grid">
+            <div class="two wide column"></div>
+            <div class="six wide column">
+                <h5>Brightness</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
+                <label>{{imgC.brightness || 0}}</label>
+            </div>
+            <div class="six wide column">
+                <h5>Brightness</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
+                <label>{{imgC.brightness || 0}}</label>
+            </div>
+            <div class="two wide column"></div>
+            <div class="two wide column"></div>
+            <div class="six wide column">
+                <h5>Brightness</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
+                <label>{{imgC.brightness || 0}}</label>
+            </div>
+            <div class="six wide column">
+                <h5>Brightness</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
+                <label>{{imgC.brightness || 0}}</label>
+            </div>
+            <div class="two wide column"></div>
+            
+        </div>  
+        <div class="ui bottom attached segment" ng-show="tab.active === 2">
+            kyhkhy
+        </div>
+    </div>
 </div>
