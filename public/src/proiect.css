@@ -2,9 +2,11 @@ h1 {
 	color : lightblue;	
 }
 
-body {
-	backgound-color:Azure;
+.ui.segment {
+	background-color:Azure;
+	background-image: url("/img/back.jpg");
 }
+
 
 .images {
 	position: relative;
@@ -14,6 +16,7 @@ body {
 	border: solid 1px lightgray;
 	border-radius: 10px;
 	text-align: center;
+	background-color: white;
 }
 
 .images > h1 {
@@ -21,4 +24,20 @@ body {
 	text-align: left;
 	margin-left:50px;
 	margin-top:10px;
+}
+.images > .likes > div {
+	background-color:#F0F0F0;
+	display: inline-block;
+	width:100px;
+}
+
+.likes >.like{
+	margin-left:30%;
+	width:100px;
+	height:35px;
+	padding-top: 5px;
+}
+
+.ui.segment.edit {
+	text-align: center;
 }

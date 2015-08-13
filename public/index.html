@@ -25,19 +25,17 @@
                 <div class="images">
                     <h1>Uploader</h1>
                     <img src="img/img1.jpg" width="300" height="300"/>
-                    <div class="likes ui grid">
-                        <div class="eight wide column">
-                            <div class="ui animated button" tabindex="0">
-                                <div class="visible content"><i class="thumbs outline up icon">Like</i></div>
+                    <div class="likes">
+                        <div class="ui animated button" tabindex="0">
+                            <div class="visible content"><i class="thumbs outline up icon">Like</i></div>
                                 <div class="hidden content"><i class="heart icon"></i></div>
                             </div>
-                        </div>
-                        <div class="eight wide column">10 Likes</div>
+                        <div class="like">10 Likes</div>
                     </div>
                     <div>Comments</div>
                 </div>
             </div>
-            <div class="ui segment" ng-show="btab.active === 2">            
+            <div class="ui segment edit" ng-show="btab.active === 2">            
                 <image-edit></image-edit>
             </div>
         </div>
