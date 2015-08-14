@@ -13,6 +13,9 @@
                 this.contrast=0;
                 this.saturation=0;
                 this.vibrance=0;
+                this.exposure=0;
+                this.hue=0;
+                
                 this.shouldRender = false;
                 this.isRendering = false;
 
@@ -32,6 +35,8 @@
                         img.contrast(parseInt(that.contrast));
                         img.saturation(parseInt(that.saturation));
                         img.vibrance(parseInt(that.vibrance));
+                        img.exposure(parseInt(that.exposure));
+                        img.hue(parseInt(that.hue));
 
                         img.render( function(){
                             that.isRendering = false;

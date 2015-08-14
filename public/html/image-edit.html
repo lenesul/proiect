@@ -33,14 +33,14 @@
             <div class="two wide column"></div>
             <div class="two wide column"></div>
             <div class="six wide column">
-                <h5>Saturation</h5>
-                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.saturation" ng-change="imgC.render()"></input>
-                <label>{{imgC.saturation}}</label>
+                <h5>Exposure</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.exposure" ng-change="imgC.render()"></input>
+                <label>{{imgC.exposure}}</label>
             </div>
             <div class="six wide column">
-                <h5>Vibrance</h5>
-                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.vibrance" ng-change="imgC.render()"></input>
-                <label>{{imgC.vibrance}}</label>
+                <h5>Hue</h5>
+                <input type="range" min="0" max="100" step="1" value="0" ng-model="imgC.hue" ng-change="imgC.render()"></input>
+                <label>{{imgC.hue}}</label>
             </div>
             <div class="two wide column"></div>
         </div>  
