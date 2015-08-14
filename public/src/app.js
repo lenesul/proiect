@@ -94,6 +94,7 @@
     
     app.controller("serverController", function($scope, $http){
         var that = this;
+        this.imgToEdit = "";
         this.data = [];
         
         $http.get('/getdatabase').success(function(data) {
