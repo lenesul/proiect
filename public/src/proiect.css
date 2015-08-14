@@ -88,3 +88,22 @@ svg line {
 	height: 100%;
 	width: 100%;
 }
+.comments > .comhead >*{
+	display: inline-block;
+	margin: 10px 80px;
+}
+
+.comments >.commcontent>.commuser {
+	text-align: left;
+	margin-left: 50px; 
+}
+.comments > .commcontent >p{
+	text-align: justify;
+	margin-left: 20px;
+	width: 320px;
+}
+
+.comments > .commcontent >*{
+	vertical-align: middle;
+	display: inline-block;
+}

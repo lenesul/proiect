@@ -10,16 +10,19 @@
 		<script src="bower_components/semantic-ui/dist/semantic.min.css"></script>
 		<!-- src -->
 		<script src="src/app.js"></script>
+        <script src="src/incercare.js"></script>
         <link rel="stylesheet" href="src/proiect.css" type="text/css"/>
         <!-- fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
 	</head>
     
     <body ng-app='instagram'>
         <div ng-controller="tabController as btab">
             <div class="ui pointing menu">
                 <a class="item" ng-class="{active : btab.active === 1}" ng-click="btab.active=1">Home</a>
-                <a class="item" ng-class="{active : btab.active === 2}" ng-click="btab.active=2">Uploads</a>
+                <a class="item" ng-class="{active : btab.active === 2}" ng-click="btab.active=2">Edit</a>
+                <a class="item" ng-class="{active : btab.active === 3}" ng-click="btab.active=3">Uploads</a>
             </div>
             <div class="ui segment" ng-show="btab.active === 1">
                 <canvas id="myCanvas"></canvas>
@@ -40,7 +43,16 @@
                             </div>
                             <button class="ui red basic button like">10 Likes</button>
                         </div>
-                        <div>Comments</div>
+                        <div class="comments">
+                            <div class="comhead">
+                                <h5>Comments</h5>
+                                <div>10 Comments</div>
+                            </div>
+                            <div class="commcontent">
+                                <div class="commuser">Username:</div>
+                                <p>egkjnkwe jngit rnhg sjknggowe pjrgnwepj osgnvoawepgjtowepjgnv ;kjlanjoa pngakjgn serignwesjngvjk sjfvns kjd</p>
+                            </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,6 +62,8 @@
                         <image-edit imglink="img/img13.jpg"></image-edit>
                     </div>
                 </div>
+            </div>
+            <div class="ui segment edit" ng-show="btab.active === 3">Chestii 
             </div>
         </div>
     </body>
