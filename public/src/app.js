@@ -6,7 +6,10 @@
         return {
             restrict: 'E',
             templateUrl: 'html/image-edit.html',
-            controller: function() {
+            scope: {
+                imgLink: '=',
+            },
+            controller: function($scope) {
                 var img = null;
                 that=this;
                 this.reset = function() {
@@ -21,13 +24,15 @@
                     that.stackBlur=0;
                 };
                 
+                console.log(imgLink);
+                
                 this.shouldRender = false;
                 this.isRendering = false;
 
-                Caman("#cvsedit", "img/img13.jpg", function () {
-                    img = this;
-                    that.reset();
-                });
+//                Caman("#cvsedit", imgLink, function () {
+//                    img = this;
+//                    that.reset();
+//                });
                 
                 this.effect = function (eff){
                     if (eff === "vintage") img.vintage();
@@ -35,6 +40,20 @@
                     else if (eff === "clarity") img.clarity();
                     else if (eff === "sinCity") img.sinCity();
                     else if (eff === "sunrise") img.sunrise();
+                    else if (eff === "crossProcess") img.crossProcess();
+                    else if (eff === "orangePeel") img.orangePeel();
+                    else if (eff === "love") img.love();
+                    else if (eff === "grungy") img.grungy();
+                    else if (eff === "jarques") img.jarques();
+                    else if (eff === "pinhole") img.pinhole();
+                    else if (eff === "oldBoot") img.oldBoot();
+                    else if (eff === "glowingSun") img.glowingSun();
+                    else if (eff === "hazyDays") img.hazyDays();
+                    else if (eff === "herMajesty") img.herMajesty();
+                    else if (eff === "nostalgia") img.nostalgia();
+                    else if (eff === "hemingway") img.hemingway();
+                    else if (eff === "concentrate") img.concentrate();
+                    
                     that.reset();
                     that.render();
                 };
