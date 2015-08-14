@@ -92,13 +92,13 @@
         this.active = 1;
     });
     
-    app.controller("serverController", function($http){
-        this.resp = null;
-        that = this;
+    app.controller("serverController", function($scope, $http){
+        var that = this;
+        this.data = [];
         
         $http.get('/getdatabase').success(function(data) {
-            console.log(data);
             that.data=data;
+            console.log(that.data);
         });
     });
 })();
