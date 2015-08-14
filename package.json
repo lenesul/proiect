@@ -2,6 +2,7 @@
   "name": "image-server",
   "version": "0.0.0",
   "dependencies": {
+    "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "morgan": "^1.6.1"
   },

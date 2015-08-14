@@ -2,6 +2,8 @@
 {
 	var app = angular.module ('instagram', []);
     
+    var img = null;
+    
     app.directive("imageEdit", function() {
         return {
             restrict: 'E',
@@ -10,7 +12,6 @@
                 imglink: '@',
             },
             controller: function($scope) {
-                var img = null;
                 that=this;
                 this.reset = function() {
                     that.brightness=0;
@@ -23,14 +24,9 @@
                     that.noise=0;
                     that.stackBlur=0;
                 };
-                
+                that.reset();
                 this.shouldRender = false;
                 this.isRendering = false;
-
-                Caman("#cvsedit", $scope.imglink, function () {
-                    img = this;
-                    that.reset();
-                });
                 
                 this.effect = function (eff){
                     if (eff === "vintage") img.vintage();
@@ -94,12 +90,30 @@
     
     app.controller("serverController", function($scope, $http){
         var that = this;
-        this.imgToEdit = "";
+        this.imgToEdit = "img/img1.jpg";
         this.data = [];
+        
+        this.imgEdit = function (imgedt) {
+            that.imgToEdit = imgedt;
+            
+            $("#cvsparent").empty();
+            $("#cvsparent").append("<canvas id='cvsedit'></canvas>");
+            img = null;
+            
+            Caman("#cvsedit", that.imgToEdit, function () {
+                    img = this;
+            });   
+            
+        };
+        this.imgEdit();
         
         $http.get('/getdatabase').success(function(data) {
             that.data=data;
             console.log(that.data);
+            
+        this.sendData = function () {
+            $http.post('/senddata', that.data).succes(console.log(ok));
+        }
         });
     });
 })();
