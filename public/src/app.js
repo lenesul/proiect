@@ -7,7 +7,7 @@
             restrict: 'E',
             templateUrl: 'html/image-edit.html',
             scope: {
-                imgLink: '=',
+                imglink: '@',
             },
             controller: function($scope) {
                 var img = null;
@@ -24,15 +24,13 @@
                     that.stackBlur=0;
                 };
                 
-                console.log(imgLink);
-                
                 this.shouldRender = false;
                 this.isRendering = false;
 
-//                Caman("#cvsedit", imgLink, function () {
-//                    img = this;
-//                    that.reset();
-//                });
+                Caman("#cvsedit", $scope.imglink, function () {
+                    img = this;
+                    that.reset();
+                });
                 
                 this.effect = function (eff){
                     if (eff === "vintage") img.vintage();
