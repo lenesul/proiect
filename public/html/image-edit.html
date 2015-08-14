@@ -1,41 +1,51 @@
-<div ng-controller="imageController as imgC">
-    <img id="#image-id" src="img/img1.jpg"/>
-    <div ng-controller="tabController as tab">
-        <div class="ui top attached tabular menu">
-            <a class="item" ng-class="{active : tab.active === 1}" ng-click="tab.active=1">Custom</a>
-            <a class="item" ng-class="{active : tab.active === 2}" ng-click="tab.active=2">Presets</a>
-        </div>
-        <div class="ui bottom attached segment" ng-show="tab.active === 1">
-            <div class="ui grid">
-                <div class="two wide column"></div>
-                <div class="six wide column">
-                    <h5>Brightness</h5>
-                    <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
-                    <label>{{imgC.brightness}}</label>
-                </div>
-                <div class="six wide column">
-                    <h5>Brightness</h5>
-                    <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
-                    <label>{{imgC.brightness}}</label>
-                </div>
-                <div class="two wide column"></div>
-                <div class="two wide column"></div>
-                <div class="six wide column">
-                    <h5>Brightness</h5>
-                    <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
-                    <label>{{imgC.brightness}}</label>
-                </div>
-                <div class="six wide column">
-                    <h5>Brightness</h5>
-                    <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness"></input>
-                    <label>{{imgC.brightness}}</label>
-                </div>
-                <div class="two wide column"></div>
-
-            </div>  
-            <div class="ui bottom attached segment" ng-show="tab.active === 2">
-                kyhkhy
+<!img id="image-id" src="img/img13.jpg"/>
+<canvas id="cvsedit"></canvas>
+<div ng-controller="tabController as tab">
+    <div class="ui top attached tabular menu">
+        <a class="item" ng-class="{active : tab.active === 1}" ng-click="tab.active=1">Custom</a>
+        <a class="item" ng-class="{active : tab.active === 2}" ng-click="tab.active=2">Presets</a>
+    </div>
+    <div class="ui bottom attached segment" ng-show="tab.active === 1">
+        <div class="ui grid">
+            <div class="two wide column"></div>
+            <div class="six wide column">
+                <h5>Brightness</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.brightness" ng-change="imgC.render()"></input>
+                <label>{{imgC.brightness}}</label>
             </div>
+            <div class="six wide column">
+                <h5>Contrast</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.contrast" ng-change="imgC.render()"></input>
+                <label>{{imgC.contrast}}</label>
+            </div>
+            <div class="two wide column"></div>
+            <div class="two wide column"></div>
+            <div class="six wide column">
+                <h5>Saturation</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.saturation" ng-change="imgC.render()"></input>
+                <label>{{imgC.saturation}}</label>
+            </div>
+            <div class="six wide column">
+                <h5>Vibrance</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.vibrance" ng-change="imgC.render()"></input>
+                <label>{{imgC.vibrance}}</label>
+            </div>
+            <div class="two wide column"></div>
+            <div class="two wide column"></div>
+            <div class="six wide column">
+                <h5>Saturation</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.saturation" ng-change="imgC.render()"></input>
+                <label>{{imgC.saturation}}</label>
+            </div>
+            <div class="six wide column">
+                <h5>Vibrance</h5>
+                <input type="range" min="-100" max="100" step="1" value="0" ng-model="imgC.vibrance" ng-change="imgC.render()"></input>
+                <label>{{imgC.vibrance}}</label>
+            </div>
+            <div class="two wide column"></div>
+        </div>  
+        <div class="ui bottom attached segment" ng-show="tab.active === 2">
+            kyhkhy
         </div>
     </div>
 </div>
