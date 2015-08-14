@@ -110,10 +110,12 @@
         $http.get('/getdatabase').success(function(data) {
             that.data=data;
             console.log(that.data);
-            
-        this.sendData = function () {
-            $http.post('/senddata', that.data).succes(console.log(ok));
-        }
         });
+        
+        this.sendData = function () {
+            $http.post('/senddata', that.data).success( function(data) {
+                console.log(data)
+            });
+        }
     });
 })();

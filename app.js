@@ -23,7 +23,7 @@ app.get('/getdatabase', function(req, res){
 });
 
 app.post('/senddata', function(req, res){
-  console.log(req);
+  console.log(req.body);
   res.send('ok');
 });
 
