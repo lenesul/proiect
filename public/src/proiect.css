@@ -99,11 +99,28 @@ svg line {
 }
 .comments > .commcontent >p{
 	text-align: justify;
-	margin-left: 20px;
+	margin-left: 0px;
+	height: 60px;
 	width: 320px;
+	overflow: auto;
+	padding: 10px;
+	border-radius:0 10px;
 }
 
 .comments > .commcontent >*{
 	vertical-align: middle;
 	display: inline-block;
+	background-color: #E6E6F3;
+	overflow: hidden;
+	margin: 0px;
+}
+.comments > .commcontent > .commuser{
+	height: 60px;
+	padding: 16px;
+	overflow: hidden;
+	border-radius:0 10px;
+}
+.comments > .comhead >h5 {
+	font-family: 'Pacifico', inherit;
+	color: #00BFFF;
 }
