@@ -1,33 +1,61 @@
 [
     {
-        "photo":"img/img1.jpg",
+        "photo": "img/img1.jpg",
         "user": "username1",
         "likes": 10,
-        "comments": 
-        [
+        "comments": [
             {
-                "user":"alex",
-                "comm":"asfas fsdf cafea need cafea si mai multa cafea"
+                "user": "alex",
+                "comm": "asfas fsdf cafea need cafea si mai multa cafea"
             },
             {
-                "user":"ioana",
-                "comm":" care vrea si ea cafea asfas fsdf cafea need cafea si mai multa cafea"
+                "user": "ioana",
+                "comm": " care vrea si ea cafea asfas fsdf cafea need cafea si mai multa cafea"
             }
         ]
     },
     {
-        "photo":"img/img2.png",
-        "user": "username1",
+        "photo": "img/img3.jpg",
+        "user": "username2",
         "likes": 10,
-        "comments": 
-        [
+        "comments": [
             {
-                "user":"alex",
-                "comm":"asfas fsdf cafea need cafea si mai multa cafea"
+                "user": "mnaofjp",
+                "comm": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius at elit a sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
             },
             {
-                "user":"ioana",
-                "comm":" care vrea si ea cafea asfas fsdf cafea need cafea si mai multa cafea"
+                "user": "mo",
+                "comm": "  Curabitur sodales ex quis mauris eleifend pharetra. Sed quis leo id purus molestie consectetur"
+            }
+        ]
+    },
+    {
+        "photo": "img/img4.jpeg",
+        "user": "username4",
+        "likes": 10,
+        "comments": [
+            {
+                "user": "sabina",
+                "comm": "sunt o blonda"
+            },
+            {
+                "user": "charlie",
+                "comm": " Suspendisse eleifend ex sed ex dictum ullamcorper. Maecenas faucibus dolor ultricies condimentum faucibus. Aliquam et auctor lorem, fermentum dictum sapien. Fusce rutrum odio in condimentum rutrum. Etiam in lorem vitae diam rutrum sollicitudin. "
+            }
+        ]
+    },
+    {
+        "photo": "img/img2.png",
+        "user": "username2",
+        "likes": 5,
+        "comments": [
+            {
+                "user": "blabla",
+                "comm": "akjlgnpqpijenas;lkfgn "
+            },
+            {
+                "user": "blablabla",
+                "comm": " 0101011110101010001101010101"
             }
         ]
     }

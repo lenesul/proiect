@@ -158,3 +158,8 @@ svg line {
 image-edit>div>div>.ui.button{
 	margin: 5px 3px 10px 5px;
 }
+.comments {
+	margin: 10px;
+}
+.content .commcontent {
+}
