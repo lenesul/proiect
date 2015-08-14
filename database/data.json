@@ -1,0 +1,34 @@
+[
+    {
+        "photo":"img/img1.jpg",
+        "user": "username1",
+        "likes": 10,
+        "comments": 
+        [
+            {
+                "user":"alex",
+                "comm":"asfas fsdf cafea need cafea si mai multa cafea"
+            },
+            {
+                "user":"ioana",
+                "comm":" care vrea si ea cafea asfas fsdf cafea need cafea si mai multa cafea"
+            }
+        ]
+    },
+    {
+        "photo":"img/img1.jpg",
+        "user": "username1",
+        "likes": 10,
+        "comments": 
+        [
+            {
+                "user":"alex",
+                "comm":"asfas fsdf cafea need cafea si mai multa cafea"
+            },
+            {
+                "user":"ioana",
+                "comm":" care vrea si ea cafea asfas fsdf cafea need cafea si mai multa cafea"
+            }
+        ]
+    }
+]

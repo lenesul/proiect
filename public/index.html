@@ -63,7 +63,8 @@
                     </div>
                 </div>
             </div>
-            <div class="ui segment edit" ng-show="btab.active === 3">Chestii 
+            <div class="ui segment edit" ng-show="btab.active === 3" ng-controller="serverController as srv"> 
+                <button class="ui red basic button like" ng-click="srv.get()">get</button>
             </div>
         </div>
     </body>
