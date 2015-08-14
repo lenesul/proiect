@@ -9,20 +9,36 @@
             controller: function() {
                 var img = null;
                 that=this;
-                this.brightness=0;
-                this.contrast=0;
-                this.saturation=0;
-                this.vibrance=0;
-                this.exposure=0;
-                this.hue=0;
+                this.reset = function() {
+                    that.brightness=0;
+                    that.contrast=0;
+                    that.saturation=0;
+                    that.vibrance=0;
+                    that.exposure=0;
+                    that.hue=0;
+                    that.gamma=1;
+                    that.noise=0;
+                    that.stackBlur=0;
+                };
                 
                 this.shouldRender = false;
                 this.isRendering = false;
 
                 Caman("#cvsedit", "img/img13.jpg", function () {
                     img = this;
+                    that.reset();
                 });
-
+                
+                this.effect = function (eff){
+                    if (eff === "vintage") img.vintage();
+                    else if (eff === "lomo") img.lomo();
+                    else if (eff === "clarity") img.clarity();
+                    else if (eff === "sinCity") img.sinCity();
+                    else if (eff === "sunrise") img.sunrise();
+                    that.reset();
+                    that.render();
+                };
+                
                 this.render = function () {
                     if  (that.isRendering === true) {
                         that.shouldRender = true;
@@ -37,6 +53,9 @@
                         img.vibrance(parseInt(that.vibrance));
                         img.exposure(parseInt(that.exposure));
                         img.hue(parseInt(that.hue));
+                        img.gamma(parseInt(that.gamma));
+                        img.noise(parseInt(that.noise));
+                        img.stackBlur(parseInt(that.stackBlur));
 
                         img.render( function(){
                             that.isRendering = false;
