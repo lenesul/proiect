@@ -4,7 +4,7 @@ h1 {
 body{
 	background-color: Azure;
 }
-.ui.segment {
+body > div >div > .ui.segment {
 	background-color: rgb(254,254,254);
 	background-image: url("/img/back.png");
 	background-repeat: no-repeat;
@@ -129,4 +129,8 @@ svg line {
 	color: #00BFFF;
 	margin-right: 0px;
 	padding-left: 50px;
+}
+
+.content > image-edit > div >div > .button{
+	margin: 5px 3px 10px 5px;
 }
