@@ -6,7 +6,7 @@ body{
 }
 .ui.segment {
 	background-color: rgb(254,254,254);
-	background-image: url("/img/back.jpg");
+	background-image: url("/img/back.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -123,4 +123,10 @@ svg line {
 .comments > .comhead >h5 {
 	font-family: 'Pacifico', inherit;
 	color: #00BFFF;
+	margin-left: 4px;
+}
+.comments > .comhead > div{
+	color: #00BFFF;
+	margin-right: 0px;
+	padding-left: 50px;
 }
