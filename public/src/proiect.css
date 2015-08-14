@@ -22,19 +22,19 @@ h1 {
   overflow: hidden;
 }
 
-.images > .content > h1 {
+.content > h1 {
 	font-family: 'Lobster', cursive;
 	text-align: left;
 	margin-left:50px;
 	margin-top:10px;
 }
-.images > .content > .likes > div {
+.likes > div {
 	background-color:#F0F0F0;
 	display: inline-block;
 	width:100px;
 }
 
-.likes > .content >.like {
+.likes >.like {
 	margin-left:30%;
 	width:100px;
 	height:35px;
@@ -78,8 +78,8 @@ svg line {
   transform: translateY(-1200px);
 }
 
-.content {
+.images > .content {
 	margin: 10px;
-	width:580px;
+	width: 580px;
 	height:580px;
 }
