@@ -5,18 +5,22 @@ h1 {
 .ui.segment {
 	background-color:Azure;
 	background-image: url("/img/back.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
 }
-
 
 .images {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	width:600px;
-	border: solid 1px lightgray;
+  height:600px;
 	border-radius: 10px;
 	text-align: center;
 	background-color: white;
+  box-shadow: inset 0 0 0 3px #2c3e50;
+  overflow: hidden;
 }
 
 .images > h1 {
@@ -31,13 +35,51 @@ h1 {
 	width:100px;
 }
 
-.likes >.like{
+.likes >.like {
 	margin-left:30%;
 	width:100px;
 	height:35px;
 	padding-top: 5px;
+	color:#E66565;
 }
 
 .ui.segment.edit {
 	text-align: center;
+}
+.likes > div >.visible.content
+{
+	color: #E66565;
+}
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+svg line {
+	stroke-width: 10;
+	stroke: #000;
+	fill: none;
+	stroke-dasharray: 600;
+	-webkit-transition: -webkit-transform .6s ease-out;
+	transition: transform .6s ease-out;
+}
+
+.images:hover svg line.top {
+  -webkit-transform: translateX(-1200px);
+  transform: translateX(-1200px);
+}
+
+.images:hover svg line.bottom {
+  -webkit-transform: translateX(1200px);
+  transform: translateX(1200px);
+}
+
+.images:hover svg line.left {
+  -webkit-transform: translateY(1200px);
+  transform: translateY(1200px);
+}
+
+.images:hover svg line.right {
+  -webkit-transform: translateY(-1200px);
+  transform: translateY(-1200px);
 }
