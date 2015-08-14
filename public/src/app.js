@@ -98,6 +98,7 @@
         
         $http.get('/getdatabase').success(function(data) {
             console.log(data);
+            that.data=data;
         });
     });
 })();
