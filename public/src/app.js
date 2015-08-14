@@ -91,4 +91,13 @@
     app.controller("tabController", function(){
         this.active = 1;
     });
+    
+    app.controller("serverController", function($http){
+        this.resp = null;
+        that = this;
+        
+        $http.get('/getdatabase').success(function(data) {
+            console.log(data);
+        });
+    });
 })();
