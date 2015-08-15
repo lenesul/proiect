@@ -14,7 +14,7 @@ body > div >div > .ui.segment {
 	left: 0px;
 	right:0px;
 	bottom:0px;
-	top:50px;
+	top:40px;
 	overflow: auto;
 	
 }
@@ -162,4 +162,8 @@ image-edit>div>div>.ui.button{
 	margin: 10px;
 }
 .content .commcontent {
+	margin: 5px;
+}
+body >div >div >.ui.segment {
+	box-shadow: 0px 0px 10px 1px #888888;
 }
