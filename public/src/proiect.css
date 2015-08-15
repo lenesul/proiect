@@ -167,3 +167,17 @@ image-edit>div>div>.ui.button{
 body >div >div >.ui.segment {
 	box-shadow: 0px 0px 10px 1px #888888;
 }
+
+form {
+	margin-left: 100px;
+	width:500px;
+	height:200px;
+	top:200px;
+	position: relative;
+	display: block;
+	text-align: left;
+}
+
+form > * {
+	margin:10px 30px;
+}

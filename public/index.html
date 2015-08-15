@@ -68,11 +68,13 @@
                 </div>
                 
                 <div class="ui segment edit" ng-show="btab.active === 3">
-                    <form action="/sendimg" method="POST" enctype = "multipart/form-data">
-                        <input type='text' name='user'><br>
-                        <input type="file" name="photo"><br>
-                        <input type="submit" value="Submit">
-                    </form>
+                    <div class='images'>
+                        <form action="/sendimg" method="POST" enctype = "multipart/form-data">
+                            <label>Username: </label><input type='text' name='user'><br>
+                            <label>Photo: </label><input type="file" name="photo"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
