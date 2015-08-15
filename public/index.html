@@ -52,6 +52,11 @@
                                     <div class="commuser">{{comm.user}}</div>
                                     <p>{{comm.comm}}</p>
                                 </div> 
+                                <form ng-submit="srv.sendComm(eid)">
+                                    <input type="text" ng-model="srv.commData.user">
+                                    <input type="text" ng-model="srv.commData.comm">
+                                    <input type="submit" value="Submit">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -62,8 +67,12 @@
                     </div>
                 </div>
                 
-                <div class="ui segment edit" ng-show="btab.active === 3">Chestii 
-                    <button ng-click="srv.sendData()">Send Data</button>
+                <div class="ui segment edit" ng-show="btab.active === 3">
+                    <form action="/sendimg" method="POST" enctype = "multipart/form-data">
+                        <input type='text' name='user'><br>
+                        <input type="file" name="photo"><br>
+                        <input type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
         </div>

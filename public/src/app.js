@@ -107,15 +107,32 @@
         };
         this.imgEdit();
         
-        $http.get('/getdatabase').success(function(data) {
+        var getDatabase = function(){
+            $http.get('/getdatabase').success(function(data) {
+            that.data.splice(0,that.data.length);
             that.data=data;
-            console.log(that.data);
-        });
+            console.log(update);
+        });};
         
-        this.sendData = function () {
-            $http.post('/senddata', that.data).success( function(data) {
+        getDatabase();
+        
+        this.sendComm = function (eid) {
+            that.commData.eid = eid;
+            console.log(that.commData);
+            $http.post('/sendcomm', that.commData).success( function(data) {
+                console.log(data)
+                getDatabase();
+            });
+        };
+        that.commData = {};
+        
+        this.imgData = {};
+        this.sendImg = function () {
+            console.log(that.imgData);
+            $http.post('/sendimg', that.imgData).success( function(data) {
                 console.log(data)
             });
-        }
+        };
+        
     });
 })();
